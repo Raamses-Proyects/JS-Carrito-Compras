@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CarritMark - Carrito de compras, parte de los proyectos personales de 
+    Raamses Chávez. Tecnologias: HTML, CSS, JavaScript">
+    <link rel="icon" type="image/svg+xml" href="./img/logo.svg">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/app.css">
+    <title>Carrito de Compras</title>
+</head>
+<body>
+    
+    <header class="header">
+        <div class="header__barra contenedor">
+            <h1 class="header__heading">CarritoMark</h1>
+
+            <div class="modal">
+                <span class="total-cantidades">0</span>
+                <img class="modal__imagen" src="img/carrito.svg" alt="imagen carrito">
+                <div class="modal__contenido">
+                    
+                    <table class="table">
+                        <thead class="table__head">
+                            <tr>
+                                <th class="table__th">Producto</th>
+                                <th class="table__th">Nombre</th>
+                                <th class="table__th">Precio</th>
+                                <th class="table__th">Cantidad</th>
+                                <th class="table__th"></th>
+                            </tr>
+                        </thead>
+
+                        <tbody class="table__body">
+                            <!-- <tr class="table__tr">
+                                <td class="table__td"> <img src="img/01-producto.jpg" alt="imagen producto"> </td>
+                                <td class="table__td">El nombre es</td>
+                                <td class="table__td">$1,000.00</td>
+                                <td class="table__td">1</td>
+                                <td> <input class="table__eliminar" type="button" value="x"> </td>
+                            </tr> -->
+                        </tbody>
+
+                        <tfoot>
+                            <tr class="table__vaciar">
+                                <td colspan="5">
+                                    <input class="table__vaciar__button" type="button" value="Vaciar Carrito">
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div> <!-- .modal__contenido -->
+            </div> <!-- .modal -->
+        </div> <!-- .header__barra -->
+    </header>
+
+    <main>
+        <section class="productos mt-5">
+            <h2 class="productos__heading">Nuestros Productos</h2>
+            <div class="productos__grid">
+                <div class="producto" data-id="1">
+                    <picture>
+                        <source class="avif" srcset="img/03-producto.avif" type="image/avif">
+                        <source class="webp" srcset="img/03-producto.webp" type="image/webp">
+                        <img class="producto__imagen" loading="lazy" src="img/03-producto.png" width="500" height="300" alt="imagen producto">
+                    </picture>
+                    <div class="producto__contenido">
+                        <h3 class="producto__heading">Limón agrio, y fresco por kg</h3>
+                        <p class="producto__texto">Disfruta de su único sabor por:</p>
+                        <p class="producto__precio">$34.90</p>
+                    </div>
+                </div> <!-- .producto -->
+
+                <div class="producto" data-id="2">
+                    <picture>
+                        <source class="avif" srcset="img/04-producto.avif" type="image/avif">
+                        <source class="webp" srcset="img/04-producto.webp" type="image/webp">
+                        <img class="producto__imagen" loading="lazy" src="img/04-producto.png" width="500" height="300" alt="imagen producto">
+                    </picture>
+                    <div class="producto__contenido">
+                        <h3 class="producto__heading">Manzana roja deliciosa por kg</h3>
+                        <p class="producto__texto">Disfruta de su único sabor por:</p>
+                        <p class="producto__precio">$41.90</p>
+                    </div>
+                </div> <!-- .producto -->
+
+                <div class="producto" data-id="3">
+                    <picture>
+                        <source class="avif" srcset="img/05-producto.avif" type="image/avif">
+                        <source class="webp" srcset="img/05-producto.webp" type="image/webp">
+                        <img class="producto__imagen" loading="lazy" src="img/05-producto.png" width="500" height="300" alt="imagen producto">
+                    </picture>
+                    <div class="producto__contenido">
+                        <h3 class="producto__heading">Café en grano Extra especial 250g</h3>
+                        <p class="producto__texto">Disfruta de su único sabor por:</p>
+                        <p class="producto__precio">$85.50</p>
+                    </div>
+                </div> <!-- .producto -->
+
+                <div class="producto" data-id="4">
+                    <picture>
+                        <source class="avif" srcset="img/02-producto.avif" type="image/avif">
+                        <source class="webp" srcset="img/02-producto.webp" type="image/webp">
+                        <img class="producto__imagen" loading="lazy" src="img/02-producto.png" width="500" height="300" alt="imagen producto">
+                    </picture>
+                    <div class="producto__contenido">
+                        <h3 class="producto__heading">Procesador AMD Ryzen 5 5600G con Gráficos</h3>
+                        <p class="producto__texto">Hasta 18 meses sin intereses</p>
+                        <p class="producto__precio">$13,999.99</p>
+                    </div>
+                </div> <!-- .producto -->
+
+                <div class="producto" data-id="5">
+                    <picture>
+                        <source class="avif" srcset="img/06-producto.avif" type="image/avif">
+                        <source class="webp" srcset="img/06-producto.webp" type="image/webp">
+                        <img class="producto__imagen" loading="lazy" src="img/06-producto.png" width="500" height="300" alt="imagen producto">
+                    </picture>
+                    <div class="producto__contenido">
+                        <h3 class="producto__heading">Cilindro de guayaba Dulces Gilys natural 120g</h3>
+                        <p class="producto__texto">Disfruta de su único sabor por:</p>
+                        <p class="producto__precio">$80.00</p>
+                    </div>
+                </div> <!-- .producto -->
+
+                <div class="producto" data-id="6">
+                    <picture>
+                        <source class="avif" srcset="img/07-producto.avif" type="image/avif">
+                        <source class="webp" srcset="img/07-producto.webp" type="image/webp">
+                        <img class="producto__imagen" loading="lazy" src="img/07-producto.jpg" width="500" height="300" alt="imagen producto">
+                    </picture>
+                    <div class="producto__contenido">
+                        <h3 class="producto__heading">Parrilla Profesional para tu Hogar</h3>
+                        <p class="producto__texto">Hasta 18 meses sin intereses</p>
+                        <p class="producto__precio">$1860.00</p>
+                    </div>
+                </div> <!-- .producto -->
+
+                <div class="producto" data-id="7">
+                    <picture>
+                        <source class="avif" srcset="img/08-producto.avif" type="image/avif">
+                        <source class="webp" srcset="img/08-producto.webp" type="image/webp">
+                        <img class="producto__imagen" loading="lazy" src="img/08-producto.png" width="500" height="300" alt="imagen producto">
+                    </picture>
+                    <div class="producto__contenido">
+                        <h3 class="producto__heading">Jabones de Avena, Aceite de Oliva y Yogurt 42.5g</h3>
+                        <p class="producto__texto">Producto cosmetico</p>
+                        <p class="producto__precio">$51.00</p>
+                    </div>
+                </div> <!-- .producto -->
+
+                <div class="producto" data-id="8">
+                    <picture>
+                        <source class="avif" srcset="img/01-producto.avif" type="image/avif">
+                        <source class="webp" srcset="img/01-producto.webp" type="image/webp">
+                        <img class="producto__imagen" loading="lazy" src="img/01-producto.png" width="500" height="300" alt="imagen producto">
+                    </picture>
+                    <div class="producto__contenido">
+                        <h3 class="producto__heading">Control de Xbox S Rojo Modo Retro</h3>
+                        <p class="producto__texto">Hasta 18 meses sin intereses</p>
+                        <p class="producto__precio">$1,490.00</p>
+                    </div>
+                </div> <!-- .producto -->
+
+                <div class="producto" data-id="9">
+                    <picture>
+                        <source class="avif" srcset="img/09-producto.avif" type="image/avif">
+                        <source class="webp" srcset="img/09-producto.webp" type="image/webp">
+                        <img class="producto__imagen" loading="lazy" src="img/09-producto.png" width="500" height="300" alt="imagen producto">
+                    </picture>
+                    <div class="producto__contenido">
+                        <h3 class="producto__heading">Cheetos Torciditos sabor flamín hot 240g</h3>
+                        <p class="producto__texto">Disfruta de su único sabor por:</p>
+                        <p class="producto__precio">$48.00</p>
+                    </div>
+                </div> <!-- .producto -->
+            </div> <!-- .productos__grid -->
+        </section>
+
+        <section class="producto-individual">
+
+        </section>
+    </main>
+
+    <footer class="footer mt-5">
+        <p class="footer__copyright">&copy; 2022 CarritoMark México. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
