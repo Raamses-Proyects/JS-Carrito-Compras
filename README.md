@@ -1,2 +1,2 @@
 # JS-Carrito-Compras
-Carrito de compras con la funcionalidad de una tienda en linea.
+Sitio web de Carrito de Compras, responsibe web design, datos perdurables con LocalStorage y construido solo con HTML, CSS puro con la metodología de BEM y JavaScript.
